@@ -3,14 +3,28 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class filter flights and return list of flights where time on earth is more than "n" hours
+ */
 public class FilterFlightsTimeOnEarth implements FlightFilter{
 
+    /** field with hours */
     int hour;
 
+    /**
+     *
+     * @param hour - hours
+     */
     public FilterFlightsTimeOnEarth(int hour) {
 
         this.hour=hour;
     }
+
+    /**
+     *
+     * @param flights - list of filtered flights
+     * @return  list of flights where time on earth is more than "n" hours
+     */
     @Override
     public List<Flight> filterFlights(List<Flight> flights) {
 
@@ -27,9 +41,9 @@ public class FilterFlightsTimeOnEarth implements FlightFilter{
 
                 for (int i = 0; i <segments.size()-1; i++) {
                     arrival = segments.get(i).getArrivalDate();
-                    departure = segments.get(i + 1).getArrivalDate();
+                    departure = segments.get(i + 1).getDepartureDate();
 
-                    Duration duration = Duration.between(arrival, departure);
+                    Duration duration = Duration.between(arrival,departure);
                     timeOnEarth = duration.toHours();
                     totalTimeOnEarth += timeOnEarth;
 
