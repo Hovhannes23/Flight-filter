@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="untitled" />
-        <module name="FlightFilter" />
+        <module name="com.gridnine.testing" />
       </profile>
     </annotationProcessing>
   </component>
