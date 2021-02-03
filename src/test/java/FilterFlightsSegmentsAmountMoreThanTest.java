@@ -5,9 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-public class FilterFlightsTimeOnEarthTest {
+public class FilterFlightsSegmentsAmountMoreThanTest {
 
     List<Flight> flights;
     @Before
@@ -26,12 +24,14 @@ public class FilterFlightsTimeOnEarthTest {
     @Test
     public void filterFlights() {
 
-        FlightFilter flightFilter = new FilterFlightsTimeOnEarth(2);
+        FlightFilter flightFilter = new FilterFlightsSegmentsAmountMoreThan(1);
 
         List<Flight> actual =  flightFilter.filterFlights(flights);
         List <Flight> expected = new ArrayList<>();
+        expected.add(flights.get(1));
         expected.add(flights.get(4));
         expected.add(flights.get(5));
         Assert.assertEquals(expected,actual);
     }
+
 }

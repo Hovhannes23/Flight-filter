@@ -9,7 +9,7 @@ public class FilterFlightsBeforeNow implements FlightFilter {
 
     /**
      *
-     * @param flights - list of filtered flights
+     * @param flights - list of flights that must be filtered
      * @return   filtered list of flights where departure time of first segment was till now
      */
     @Override

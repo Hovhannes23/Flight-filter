@@ -22,7 +22,7 @@ public class FilterFlightsTimeOnEarth implements FlightFilter{
 
     /**
      *
-     * @param flights - list of filtered flights
+     * @param flights - list of flights that must be filtered
      * @return  list of flights where time on earth is more than "n" hours
      */
     @Override

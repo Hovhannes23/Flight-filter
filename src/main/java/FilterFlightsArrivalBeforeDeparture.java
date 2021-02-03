@@ -10,7 +10,7 @@ public class FilterFlightsArrivalBeforeDeparture implements FlightFilter {
 
     /**
      *
-     * @param flights - list of filtered flights
+     * @param flights - list of flights that must be filtered
      * @return  filtered list of flights where arrival time of one segment
      *  *  is earlier than departure time of the next.
      */
